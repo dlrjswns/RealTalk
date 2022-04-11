@@ -17,6 +17,7 @@ class RegisterViewController: BaseViewController {
     }
     
     override func configureUI() {
+        view.backgroundColor = .link
         view.addSubview(selfView)
         selfView.translatesAutoresizingMaskIntoConstraints = false
         selfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true

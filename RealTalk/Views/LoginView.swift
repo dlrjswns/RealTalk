@@ -8,6 +8,51 @@
 import UIKit
 
 class LoginView: BaseView {
+    
+    let scrollView: UIScrollView = {
+       let scrollView = UIScrollView()
+        return scrollView
+    }()
+    
+    let imageView: UIImageView = {
+       let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.masksToBounds = true
+        imageView.image = UIImage(named: "logo")
+        return imageView
+    }()
+    
+    let emailField: UITextField = {
+       let textField = UITextField()
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.returnKeyType = .continue
+        textField.layer.cornerRadius = 12
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.placeholder = "Email Address..."
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        textField.leftViewMode = .always
+        textField.backgroundColor = .white
+        return textField
+    }()
+    
+    let passwordField: UITextField = {
+       let textField = UITextField()
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.returnKeyType = .continue
+        textField.layer.cornerRadius = 12
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.placeholder = "Email Address..."
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        textField.leftViewMode = .always
+        textField.backgroundColor = .white
+        textField.isSecureTextEntry = true
+        return textField
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -16,7 +61,41 @@ class LoginView: BaseView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func configureUI() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageView.widthAnchor.constraint(equalToConstant: self.frame.width / 3).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: self.frame.width / 3).isActive = true
         
+        emailField.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
+        passwordField.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
+    }
+    
+    override func configureUI() {
+        addSubview(scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        scrollView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        scrollView.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
+        
+        scrollView.addSubview(emailField)
+        emailField.translatesAutoresizingMaskIntoConstraints = false
+        emailField.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+        emailField.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
+        emailField.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        
+        scrollView.addSubview(passwordField)
+        passwordField.translatesAutoresizingMaskIntoConstraints = false
+        passwordField.centerXAnchor.constraint(equalTo: emailField.centerXAnchor).isActive = true
+        passwordField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 20).isActive = true
+        passwordField.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        
+//        imageView.widthAnchor.constraint(equalToConstant: self.frame.width / 4).isActive = true
+//        imageView.heightAnchor.constraint(equalToConstant: self.frame.width / 4).isActive = true
     }
 }

@@ -14,9 +14,22 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
+                                                            style: .done,
+                                                            target: self,
+                                                            action: #selector(didTapRegister))
+    }
+    
+    @objc private func didTapRegister() {
+        let vc = RegisterViewController()
+        vc.title = "Create Account"
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func configureUI() {
+        title = "Log In"
+        view.backgroundColor = .white
         view.addSubview(selfView)
         selfView.translatesAutoresizingMaskIntoConstraints = false
         selfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true

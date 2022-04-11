@@ -27,6 +27,7 @@
 		70BDDF022803A9DD009A4818 /* NewConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDF012803A9DD009A4818 /* NewConversationView.swift */; };
 		70BDDF042803A9E2009A4818 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDF032803A9E2009A4818 /* ProfileView.swift */; };
 		70BDDF062803A9EB009A4818 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDF052803A9EB009A4818 /* BaseView.swift */; };
+		70CA5E0D2803E58D00BDF9AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E0C2803E58D00BDF9AF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		70BDDF012803A9DD009A4818 /* NewConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationView.swift; sourceTree = "<group>"; };
 		70BDDF032803A9E2009A4818 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		70BDDF052803A9EB009A4818 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		70CA5E0C2803E58D00BDF9AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				70BDDECF2803A7BA009A4818 /* AppDelegate.swift */,
 				70BDDED12803A7BA009A4818 /* SceneDelegate.swift */,
+				70CA5E0C2803E58D00BDF9AF /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				70BDDF022803A9DD009A4818 /* NewConversationView.swift in Sources */,
 				70BDDED02803A7BA009A4818 /* AppDelegate.swift in Sources */,
 				70BDDEF02803A851009A4818 /* VideoPlayerViewController.swift in Sources */,
+				70CA5E0D2803E58D00BDF9AF /* Extensions.swift in Sources */,
 				70BDDEF62803A91D009A4818 /* BaseViewController.swift in Sources */,
 				70BDDEFA2803A9BE009A4818 /* LoginView.swift in Sources */,
 				70BDDF042803A9E2009A4818 /* ProfileView.swift in Sources */,
