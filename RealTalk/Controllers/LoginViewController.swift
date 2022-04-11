@@ -19,12 +19,37 @@ class LoginViewController: BaseViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(didTapRegister))
+        selfView.loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        selfView.emailField.delegate = self
+        selfView.passwordField.delegate = self
     }
     
     @objc private func didTapRegister() {
         let vc = RegisterViewController()
         vc.title = "Create Account"
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func didTapLoginButton() {
+        
+        selfView.emailField.resignFirstResponder()
+        selfView.passwordField.resignFirstResponder()
+        
+        guard let email = selfView.emailField.text,
+              let password = selfView.passwordField.text,
+              !email.isEmpty, !password.isEmpty, password.count >= 6 else {
+                    alertUserLoginError()
+                    return
+        }
+    }
+    
+    func alertUserLoginError() {
+        let alert = UIAlertController(title: "Woops",
+                                      message: "Please enter all information to log in.",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss",
+                                      style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     override func configureUI() {
@@ -36,5 +61,17 @@ class LoginViewController: BaseViewController {
         selfView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         selfView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         selfView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == selfView.emailField {
+            selfView.passwordField.becomeFirstResponder()
+        }
+        else if textField == selfView.passwordField {
+            didTapLoginButton()
+        }
+        return true
     }
 }
