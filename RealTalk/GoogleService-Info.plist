@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>49151105620-85dgbmf9ga86t950s2jt1u6ukpsb9dg3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.49151105620-85dgbmf9ga86t950s2jt1u6ukpsb9dg3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCwkd6bPZOY00jkZ4apY1UvZTJX1R2fv34</string>
+	<key>GCM_SENDER_ID</key>
+	<string>49151105620</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Jun.RealTalk</string>
+	<key>PROJECT_ID</key>
+	<string>realtalk-b06a2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>realtalk-b06a2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:49151105620:ios:863844e279fb6f975fabc1</string>
+</dict>
+</plist>

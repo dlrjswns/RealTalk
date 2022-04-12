@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,9 +28,14 @@
 		70BDDF042803A9E2009A4818 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDF032803A9E2009A4818 /* ProfileView.swift */; };
 		70BDDF062803A9EB009A4818 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDF052803A9EB009A4818 /* BaseView.swift */; };
 		70CA5E0D2803E58D00BDF9AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E0C2803E58D00BDF9AF /* Extensions.swift */; };
+		70CA5E162805810A00BDF9AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CA5E152805810A00BDF9AF /* GoogleService-Info.plist */; };
+		70CA5E18280584AB00BDF9AF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E17280584AB00BDF9AF /* AuthManager.swift */; };
+		8ED803DADF9268EBE61984D4 /* Pods_RealTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09B2532409CC6DF28B84DBA1 /* Pods-RealTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTalk.release.xcconfig"; path = "Target Support Files/Pods-RealTalk/Pods-RealTalk.release.xcconfig"; sourceTree = "<group>"; };
+		4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BDDECC2803A7BA009A4818 /* RealTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BDDECF2803A7BA009A4818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70BDDED12803A7BA009A4818 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,9 @@
 		70BDDF032803A9E2009A4818 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		70BDDF052803A9EB009A4818 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		70CA5E0C2803E58D00BDF9AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		70CA5E152805810A00BDF9AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70CA5E17280584AB00BDF9AF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		A5920B2811C62C2231E21C87 /* Pods-RealTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTalk.debug.xcconfig"; path = "Target Support Files/Pods-RealTalk/Pods-RealTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +69,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED803DADF9268EBE61984D4 /* Pods_RealTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E09CF9E775A8FEFFE41C0D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5920B2811C62C2231E21C87 /* Pods-RealTalk.debug.xcconfig */,
+				09B2532409CC6DF28B84DBA1 /* Pods-RealTalk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		70BDDEC32803A7BA009A4818 = {
 			isa = PBXGroup;
 			children = (
 				70BDDECE2803A7BA009A4818 /* RealTalk */,
 				70BDDECD2803A7BA009A4818 /* Products */,
+				5E09CF9E775A8FEFFE41C0D1 /* Pods */,
+				72375394FBF7A4BF924DA486 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +106,7 @@
 		70BDDECE2803A7BA009A4818 /* RealTalk */ = {
 			isa = PBXGroup;
 			children = (
+				70CA5E152805810A00BDF9AF /* GoogleService-Info.plist */,
 				70BDDEE62803A7D9009A4818 /* Resources */,
 				70BDDEE52803A7D3009A4818 /* Models */,
 				70BDDEE42803A7CF009A4818 /* Views */,
@@ -140,8 +161,17 @@
 				70BDDECF2803A7BA009A4818 /* AppDelegate.swift */,
 				70BDDED12803A7BA009A4818 /* SceneDelegate.swift */,
 				70CA5E0C2803E58D00BDF9AF /* Extensions.swift */,
+				70CA5E17280584AB00BDF9AF /* AuthManager.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		72375394FBF7A4BF924DA486 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70BDDEE02803A7BB009A4818 /* Build configuration list for PBXNativeTarget "RealTalk" */;
 			buildPhases = (
+				2F03302B95E896962C64AEB7 /* [CP] Check Pods Manifest.lock */,
 				70BDDEC82803A7BA009A4818 /* Sources */,
 				70BDDEC92803A7BA009A4818 /* Frameworks */,
 				70BDDECA2803A7BA009A4818 /* Resources */,
+				B8FB78F0CC80D930F200D3C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,10 +235,53 @@
 			files = (
 				70BDDEDC2803A7BB009A4818 /* LaunchScreen.storyboard in Resources */,
 				70BDDED92803A7BB009A4818 /* Assets.xcassets in Resources */,
+				70CA5E162805810A00BDF9AF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F03302B95E896962C64AEB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8FB78F0CC80D930F200D3C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealTalk/Pods-RealTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealTalk/Pods-RealTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealTalk/Pods-RealTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70BDDEC82803A7BA009A4818 /* Sources */ = {
@@ -222,6 +297,7 @@
 				70BDDEF02803A851009A4818 /* VideoPlayerViewController.swift in Sources */,
 				70CA5E0D2803E58D00BDF9AF /* Extensions.swift in Sources */,
 				70BDDEF62803A91D009A4818 /* BaseViewController.swift in Sources */,
+				70CA5E18280584AB00BDF9AF /* AuthManager.swift in Sources */,
 				70BDDEFA2803A9BE009A4818 /* LoginView.swift in Sources */,
 				70BDDF042803A9E2009A4818 /* ProfileView.swift in Sources */,
 				70BDDED22803A7BA009A4818 /* SceneDelegate.swift in Sources */,
@@ -367,6 +443,7 @@
 		};
 		70BDDEE12803A7BB009A4818 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5920B2811C62C2231E21C87 /* Pods-RealTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -385,6 +462,7 @@
 		};
 		70BDDEE22803A7BB009A4818 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09B2532409CC6DF28B84DBA1 /* Pods-RealTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

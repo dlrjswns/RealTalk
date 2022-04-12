@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: BaseViewController {
     
@@ -14,11 +15,11 @@ class RegisterViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(didTapRegister))
+        title = "Create Account"
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
+//                                                            style: .done,
+//                                                            target: self,
+//                                                            action: #selector(didTapRegister))
         selfView.registerButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
         selfView.emailField.delegate = self
         selfView.passwordField.delegate = self
@@ -34,14 +35,14 @@ class RegisterViewController: BaseViewController {
     
     //MARK: -Action
     @objc private func didTapChangeProfilePick() {
-        print("Change pic called")
+        presentPhotoActionSheet()
     }
     
-    @objc private func didTapRegister() {
-        let vc = RegisterViewController()
-        vc.title = "Create Account"
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    @objc private func didTapRegister() {
+//        let vc = RegisterViewController()
+//        vc.title = "Create Account"
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
     
     @objc private func didTapRegisterButton() {
         
@@ -61,6 +62,17 @@ class RegisterViewController: BaseViewController {
               password.count >= 6 else {
                     alertUserLoginError()
                     return
+        }
+        
+        AuthManager.shared.createUser(email: email, password: password) { isRegister in
+            if isRegister {
+                // success register
+                print("Success Register")
+            }
+            else {
+                // fail register
+                print("Fail Register")
+            }
         }
     }
     
@@ -85,6 +97,7 @@ class RegisterViewController: BaseViewController {
     }
 }
 
+//MARK: -UITextFieldDelegate
 extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == selfView.emailField {
@@ -95,4 +108,66 @@ extension RegisterViewController: UITextFieldDelegate {
         }
         return true
     }
+}
+
+//MARK: -UIImagePickerControllerDelegate
+extension RegisterViewController: UIImagePickerControllerDelegate {
+    
+    func presentPhotoActionSheet() {
+        let actionSheet = UIAlertController(title: "Profile Picture",
+                                            message: "How would you like to select a picture?",
+                                            preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel",
+                                            style: .cancel,
+                                            handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Take Photo",
+                                            style: .default,
+                                            handler: { [weak self] _ in
+                                                self?.presentCamera()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Chose Photo",
+                                            style: .default,
+                                            handler: { [weak self] _ in
+                                                self?.presentPhotoPicker()
+        }))
+        
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func presentCamera() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.allowsEditing = true //편집가능여부 확인
+        vc.delegate = self
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func presentPhotoPicker() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.allowsEditing = true //편집가능여부 확인
+        vc.delegate = self
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(info)
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            return
+        }
+        self.selfView.imageView.image = selectedImage
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+//MARK: -UINavigationControllerDelegate
+extension RegisterViewController: UINavigationControllerDelegate {
+    
 }

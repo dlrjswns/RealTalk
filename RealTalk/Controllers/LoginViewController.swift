@@ -26,7 +26,6 @@ class LoginViewController: BaseViewController {
     
     @objc private func didTapRegister() {
         let vc = RegisterViewController()
-        vc.title = "Create Account"
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -40,6 +39,17 @@ class LoginViewController: BaseViewController {
               !email.isEmpty, !password.isEmpty, password.count >= 6 else {
                     alertUserLoginError()
                     return
+        }
+        
+        AuthManager.shared.loginUser(email: email, password: password) { isLogin in
+            if !isLogin {
+                // Fail Log In
+                print("Failed Log In")
+            }
+            else {
+                // Success Log In
+                print("Success Log In")
+            }
         }
     }
     

@@ -20,6 +20,8 @@ class RegisterView: BaseView {
         imageView.layer.masksToBounds = true
         imageView.tintColor = .gray
         imageView.image = UIImage(systemName: "person")
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
         return imageView
     }()
     
@@ -46,7 +48,7 @@ class RegisterView: BaseView {
         textField.layer.cornerRadius = 12
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.placeholder = "Email Address..."
+        textField.placeholder = "Last Name..."
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         textField.leftViewMode = .always
         textField.backgroundColor = .white
@@ -107,6 +109,7 @@ class RegisterView: BaseView {
         super.layoutSubviews()
         imageView.widthAnchor.constraint(equalToConstant: self.frame.width / 3).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: self.frame.width / 3).isActive = true
+        imageView.layer.cornerRadius = self.frame.width / 3 / 2
         
         emailField.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
         passwordField.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
