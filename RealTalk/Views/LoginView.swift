@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import FacebookLogin
 
 class LoginView: BaseView {
     
@@ -63,6 +64,8 @@ class LoginView: BaseView {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return button
     }()
+    
+//    let loginButton = FBLoginButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

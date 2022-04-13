@@ -31,6 +31,7 @@
 		70CA5E162805810A00BDF9AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CA5E152805810A00BDF9AF /* GoogleService-Info.plist */; };
 		70CA5E18280584AB00BDF9AF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E17280584AB00BDF9AF /* AuthManager.swift */; };
 		70CA5E1A280669E300BDF9AF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E19280669E300BDF9AF /* DatabaseManager.swift */; };
+		70CA5E1C2806BFB600BDF9AF /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */; };
 		8ED803DADF9268EBE61984D4 /* Pods_RealTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		70CA5E152805810A00BDF9AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70CA5E17280584AB00BDF9AF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		70CA5E19280669E300BDF9AF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		A5920B2811C62C2231E21C87 /* Pods-RealTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTalk.debug.xcconfig"; path = "Target Support Files/Pods-RealTalk/Pods-RealTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				70BDDEF12803A864009A4818 /* NewConversationViewController.swift */,
 				70BDDEF32803A86E009A4818 /* ProfileViewController.swift */,
 				70BDDEF52803A91D009A4818 /* BaseViewController.swift */,
+				70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				70BDDEF22803A864009A4818 /* NewConversationViewController.swift in Sources */,
 				70BDDF022803A9DD009A4818 /* NewConversationView.swift in Sources */,
 				70BDDED02803A7BA009A4818 /* AppDelegate.swift in Sources */,
+				70CA5E1C2806BFB600BDF9AF /* MainTabbarController.swift in Sources */,
 				70BDDEF02803A851009A4818 /* VideoPlayerViewController.swift in Sources */,
 				70CA5E0D2803E58D00BDF9AF /* Extensions.swift in Sources */,
 				70BDDEF62803A91D009A4818 /* BaseViewController.swift in Sources */,
@@ -452,7 +456,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ASZ874HB9K;
 				INFOPLIST_FILE = RealTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,7 +477,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ASZ874HB9K;
 				INFOPLIST_FILE = RealTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

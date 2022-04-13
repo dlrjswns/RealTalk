@@ -64,6 +64,14 @@ class RegisterViewController: BaseViewController {
                     return
         }
         
+        DatabaseManager.shared.userExists(with: email) { [weak self] isExist in
+            guard !isExist else {
+                // user already exists
+                self?.alertUserLoginError(message: "Looks like a user account for that email address already exists")
+                return
+            }
+        }
+        
         AuthManager.shared.createUser(email: email, password: password) { [weak self] isRegister in
             if isRegister {
                 // success register
@@ -73,7 +81,7 @@ class RegisterViewController: BaseViewController {
                                                                     lastName: lastName,
                                                                     emailAddress: email))
                 
-                self?.navigationController?.dismiss(animated: true, completion: nil)
+                self?.navigationController?.popViewController(animated: true)
             }
             else {
                 // fail register
@@ -82,9 +90,9 @@ class RegisterViewController: BaseViewController {
         }
     }
     
-    func alertUserLoginError() {
+    func alertUserLoginError(message: String = "Please enter all information to create a new account.") {
         let alert = UIAlertController(title: "Woops",
-                                      message: "Please enter all information to create a new account.",
+                                      message: message,
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss",
                                       style: .cancel, handler: nil))
