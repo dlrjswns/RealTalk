@@ -64,10 +64,16 @@ class RegisterViewController: BaseViewController {
                     return
         }
         
-        AuthManager.shared.createUser(email: email, password: password) { isRegister in
+        AuthManager.shared.createUser(email: email, password: password) { [weak self] isRegister in
             if isRegister {
                 // success register
                 print("Success Register")
+                
+                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
+                                                                    lastName: lastName,
+                                                                    emailAddress: email))
+                
+                self?.navigationController?.dismiss(animated: true, completion: nil)
             }
             else {
                 // fail register

@@ -49,5 +49,14 @@ public class AuthManager {
             completion(true)
         }
     }
+    
+    public func checkCurrentUser(completion: @escaping (Bool) -> Void) {
+        if auth.currentUser == nil {
+            completion(false)
+        }
+        else {
+            completion(true)
+        }
+    }
 }
 

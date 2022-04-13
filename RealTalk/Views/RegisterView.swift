@@ -19,7 +19,7 @@ class RegisterView: BaseView {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
         imageView.tintColor = .gray
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(systemName: "person.circle")
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.lightGray.cgColor
         return imageView

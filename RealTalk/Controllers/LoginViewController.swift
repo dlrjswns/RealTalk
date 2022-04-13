@@ -41,7 +41,7 @@ class LoginViewController: BaseViewController {
                     return
         }
         
-        AuthManager.shared.loginUser(email: email, password: password) { isLogin in
+        AuthManager.shared.loginUser(email: email, password: password) { [weak self] isLogin in
             if !isLogin {
                 // Fail Log In
                 print("Failed Log In")
@@ -49,6 +49,7 @@ class LoginViewController: BaseViewController {
             else {
                 // Success Log In
                 print("Success Log In")
+                self?.navigationController?.dismiss(animated: true, completion: nil)
             }
         }
     }

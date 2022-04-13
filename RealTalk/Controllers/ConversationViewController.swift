@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ConversationViewController: BaseViewController {
     
@@ -14,22 +15,27 @@ class ConversationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
-        let isLoggedIn = UserDefaults.standard.bool(forKey: "logged_in")
-        
-        if !isLoggedIn {
-            let vc = LoginViewController()
-            let nav = UINavigationController(rootViewController: vc)
-            nav.modalPresentationStyle = .fullScreen
-            present(nav, animated: false, completion: nil)
+        validateAuth()
+    }
+    
+    private func validateAuth() {
+        AuthManager.shared.checkCurrentUser { [weak self] isExistUser in
+            if !isExistUser {
+                let vc = LoginViewController()
+                let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .fullScreen
+                self?.present(nav, animated: false, completion: nil)
+            }
         }
     }
     
     override func configureUI() {
+        view.backgroundColor = .red
         view.addSubview(selfView)
         selfView.translatesAutoresizingMaskIntoConstraints = false
         selfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true

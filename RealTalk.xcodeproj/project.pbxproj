@@ -30,6 +30,7 @@
 		70CA5E0D2803E58D00BDF9AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E0C2803E58D00BDF9AF /* Extensions.swift */; };
 		70CA5E162805810A00BDF9AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CA5E152805810A00BDF9AF /* GoogleService-Info.plist */; };
 		70CA5E18280584AB00BDF9AF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E17280584AB00BDF9AF /* AuthManager.swift */; };
+		70CA5E1A280669E300BDF9AF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E19280669E300BDF9AF /* DatabaseManager.swift */; };
 		8ED803DADF9268EBE61984D4 /* Pods_RealTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		70CA5E0C2803E58D00BDF9AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		70CA5E152805810A00BDF9AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70CA5E17280584AB00BDF9AF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		70CA5E19280669E300BDF9AF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		A5920B2811C62C2231E21C87 /* Pods-RealTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTalk.debug.xcconfig"; path = "Target Support Files/Pods-RealTalk/Pods-RealTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				70BDDED12803A7BA009A4818 /* SceneDelegate.swift */,
 				70CA5E0C2803E58D00BDF9AF /* Extensions.swift */,
 				70CA5E17280584AB00BDF9AF /* AuthManager.swift */,
+				70CA5E19280669E300BDF9AF /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				70BDDF062803A9EB009A4818 /* BaseView.swift in Sources */,
 				70BDDEEE2803A844009A4818 /* PhotoViewerViewController.swift in Sources */,
 				70BDDF002803A9D3009A4818 /* VideoPlayerView.swift in Sources */,
+				70CA5E1A280669E300BDF9AF /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
