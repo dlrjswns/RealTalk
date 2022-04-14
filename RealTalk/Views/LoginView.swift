@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import FacebookLogin
+import FacebookLogin
 
 class LoginView: BaseView {
     
@@ -65,10 +65,16 @@ class LoginView: BaseView {
         return button
     }()
     
-//    let loginButton = FBLoginButton()
+    let fbLoginButton: FBLoginButton = {
+       let button = FBLoginButton()
+        button.permissions = ["public_profile", "email"]
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        fbLoginButton.tooltipBehavior = .automatic
+        
     }
     
     required init?(coder: NSCoder) {
@@ -83,6 +89,7 @@ class LoginView: BaseView {
         emailField.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
         passwordField.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
         loginButton.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
+        fbLoginButton.widthAnchor.constraint(equalToConstant: scrollView.width - 60).isActive = true
     }
     
     override func configureUI() {
@@ -115,6 +122,12 @@ class LoginView: BaseView {
         loginButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         loginButton.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 20).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 52).isActive = true
+        
+        scrollView.addSubview(fbLoginButton)
+        fbLoginButton.translatesAutoresizingMaskIntoConstraints = false
+        fbLoginButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        fbLoginButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20).isActive = true
+        fbLoginButton.heightAnchor.constraint(equalToConstant: 52).isActive = true
         
 //        imageView.widthAnchor.constraint(equalToConstant: self.frame.width / 4).isActive = true
 //        imageView.heightAnchor.constraint(equalToConstant: self.frame.width / 4).isActive = true

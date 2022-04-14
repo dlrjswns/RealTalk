@@ -70,5 +70,20 @@ public class AuthManager {
             completion(false)
         }
     }
+    
+    public func signInWithFacebook(authCredential: AuthCredential, completion: @escaping ((Bool) -> Void)) {
+        auth.signIn(with: authCredential) { authResult, error in
+            guard authResult != nil, error == nil else {
+                if let error = error {
+                    print("Facebook credential login failed, MFA may be needed - \(error)")
+                }
+                completion(false)
+                return
+            }
+            
+            print("Successfully logged user in")
+            completion(true)
+        }
+    }
 }
 
