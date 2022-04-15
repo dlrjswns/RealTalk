@@ -32,7 +32,7 @@
 		70CA5E18280584AB00BDF9AF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E17280584AB00BDF9AF /* AuthManager.swift */; };
 		70CA5E1A280669E300BDF9AF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E19280669E300BDF9AF /* DatabaseManager.swift */; };
 		70CA5E1C2806BFB600BDF9AF /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */; };
-		8ED803DADF9268EBE61984D4 /* Pods_RealTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */; };
+		B8A63403AC86B7579D6BC64A /* Pods_RealTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED803DADF9268EBE61984D4 /* Pods_RealTalk.framework in Frameworks */,
+				B8A63403AC86B7579D6BC64A /* Pods_RealTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 		};
 		B8FB78F0CC80D930F200D3C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -370,6 +370,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -431,6 +432,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -457,6 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASZ874HB9K;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = RealTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -467,6 +470,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -478,6 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASZ874HB9K;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = RealTalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,6 +493,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};

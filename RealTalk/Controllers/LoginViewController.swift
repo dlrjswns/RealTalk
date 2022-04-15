@@ -103,6 +103,7 @@ extension LoginViewController: LoginButtonDelegate {
             print("User failed to log In with facebook")
             return
         }
+        print("token = \(token)")
         
         let facebookRequest = FBSDKLoginKit.GraphRequest(graphPath: "me",
                                                          parameters: ["fields": "email, name"],
