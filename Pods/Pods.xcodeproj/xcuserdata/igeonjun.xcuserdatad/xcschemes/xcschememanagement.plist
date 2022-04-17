@@ -123,6 +123,16 @@
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
+		<key>InputBarAccessoryView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MessageKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RealTalk.xcscheme</key>
 		<dict>
 			<key>isShown</key>

@@ -16,6 +16,8 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 
+pod 'MessageKit'
+
   # Pods for RealTalk
 
 end
