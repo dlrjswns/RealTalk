@@ -14,9 +14,19 @@ class LoginViewController: BaseViewController {
     
     private let selfView = LoginView()
     
+    private var loginObserver: NSObjectProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        loginObserver = NotificationCenter.default.addObserver(forName: .didLoginNotification, object: nil, queue: .main)
+        { [weak self] _ in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+        }
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
                                                             style: .done,
@@ -27,11 +37,12 @@ class LoginViewController: BaseViewController {
         selfView.passwordField.delegate = self
         selfView.fbLoginButton.delegate = self
         
-        //FBLogin Token
-        if let token = AccessToken.current,
-                !token.isExpired {
-                // User is logged in, do work such as go to next view controller.
-            }
+    }
+    
+    deinit {
+        if let observer = loginObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
     
     @objc private func didTapRegister() {

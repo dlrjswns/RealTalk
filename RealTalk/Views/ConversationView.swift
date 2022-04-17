@@ -8,6 +8,12 @@
 import UIKit
 
 class ConversationView: BaseView {
+    
+    let tableView: UITableView = {
+       
+       return $0
+    }(UITableView())
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

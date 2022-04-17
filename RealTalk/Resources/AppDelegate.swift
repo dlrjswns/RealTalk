@@ -16,7 +16,7 @@ import FacebookCore
                 application,
                 didFinishLaunchingWithOptions: launchOptions
             )
-            
+            NotificationCenter.default.post(name: .didLoginNotification, object: nil)
             
             return true
         }

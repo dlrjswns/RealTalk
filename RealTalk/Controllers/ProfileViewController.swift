@@ -41,26 +41,23 @@ extension ProfileViewController: UITableViewDelegate {
         let actionSheet = UIAlertController(title: "",
                                       message: "",
                                       preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Log Out",
-                                      style: .destructive,
-                                      handler: { _ in
-                                        
-                                            // Log Out facebook
-                                            FBSDKLoginKit.LoginManager().logOut()
-                                        
-                                            AuthManager.shared.logOutUser { [weak self] logout in
-                                                if logout {
-                                                    // Success logout
-                                                    let vc = LoginViewController()
-                                                    let nav = UINavigationController(rootViewController: vc)
-                                                    nav.modalPresentationStyle = .fullScreen
-                                                    self?.present(nav, animated: true, completion: nil)
-                                                }
-                                                else {
-                                                    // Failed logout
-                                                }
-                                            }
-                                      }))
+        actionSheet.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { _ in
+            // Log Out facebook
+            FBSDKLoginKit.LoginManager().logOut()
+            
+            AuthManager.shared.logOutUser { [weak self] logout in
+                if logout {
+                    // Success logout
+                    let vc = LoginViewController()
+                    let nav = UINavigationController(rootViewController: vc)
+                    nav.modalPresentationStyle = .fullScreen
+                    self?.present(nav, animated: true, completion: nil)
+                }
+                else {
+                    // Failed logout
+                }
+            }
+        }))
         actionSheet.addAction(UIAlertAction(title: "Cancel",
                                             style: .cancel,
                                             handler: nil))
