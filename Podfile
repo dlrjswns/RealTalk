@@ -17,6 +17,7 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 
 pod 'MessageKit'
+pod 'JGProgressHUD'
 
   # Pods for RealTalk
 
