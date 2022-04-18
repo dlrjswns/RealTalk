@@ -18,6 +18,7 @@ pod 'FacebookShare'
 
 pod 'MessageKit'
 pod 'JGProgressHUD'
+pod 'RealmSwift'
 
   # Pods for RealTalk
 

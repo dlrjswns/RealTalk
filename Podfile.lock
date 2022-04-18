@@ -131,6 +131,11 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.1.0)
+  - Realm (10.25.1):
+    - Realm/Headers (= 10.25.1)
+  - Realm/Headers (10.25.1)
+  - RealmSwift (10.25.1):
+    - Realm (= 10.25.1)
 
 DEPENDENCIES:
   - FacebookCore
@@ -142,6 +147,7 @@ DEPENDENCIES:
   - Firebase/Database
   - JGProgressHUD
   - MessageKit
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -168,6 +174,8 @@ SPEC REPOS:
     - MessageKit
     - nanopb
     - PromisesObjC
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
@@ -193,7 +201,9 @@ SPEC CHECKSUMS:
   MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  Realm: 1a6e9b4f6983711655d8c0bcb6d2d29c3afbb1f3
+  RealmSwift: e72669550d27082aa4fad5d176f5076cfe806245
 
-PODFILE CHECKSUM: bce430b369053ea5f04a5ed7bd6854696a892bab
+PODFILE CHECKSUM: b30f8491e1f869ceb20fded20642a249330349e8
 
 COCOAPODS: 1.11.2
