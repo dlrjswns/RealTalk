@@ -32,6 +32,8 @@
 		70CA5E18280584AB00BDF9AF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E17280584AB00BDF9AF /* AuthManager.swift */; };
 		70CA5E1A280669E300BDF9AF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E19280669E300BDF9AF /* DatabaseManager.swift */; };
 		70CA5E1C2806BFB600BDF9AF /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */; };
+		70CA5E50280D7A2F00BDF9AF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E4F280D7A2F00BDF9AF /* ChatViewController.swift */; };
+		70CA5E52280D7A4800BDF9AF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E51280D7A4800BDF9AF /* ChatView.swift */; };
 		B8A63403AC86B7579D6BC64A /* Pods_RealTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		70CA5E17280584AB00BDF9AF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		70CA5E19280669E300BDF9AF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		70CA5E4F280D7A2F00BDF9AF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		70CA5E51280D7A4800BDF9AF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A5920B2811C62C2231E21C87 /* Pods-RealTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTalk.debug.xcconfig"; path = "Target Support Files/Pods-RealTalk/Pods-RealTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,7 @@
 				70BDDEF32803A86E009A4818 /* ProfileViewController.swift */,
 				70BDDEF52803A91D009A4818 /* BaseViewController.swift */,
 				70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */,
+				70CA5E4F280D7A2F00BDF9AF /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				70BDDF012803A9DD009A4818 /* NewConversationView.swift */,
 				70BDDF032803A9E2009A4818 /* ProfileView.swift */,
 				70BDDF052803A9EB009A4818 /* BaseView.swift */,
+				70CA5E51280D7A4800BDF9AF /* ChatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				70BDDEEC2803A837009A4818 /* RegisterViewController.swift in Sources */,
 				70BDDEFC2803A9C4009A4818 /* RegisterView.swift in Sources */,
 				70BDDEF22803A864009A4818 /* NewConversationViewController.swift in Sources */,
+				70CA5E52280D7A4800BDF9AF /* ChatView.swift in Sources */,
 				70BDDF022803A9DD009A4818 /* NewConversationView.swift in Sources */,
 				70BDDED02803A7BA009A4818 /* AppDelegate.swift in Sources */,
 				70CA5E1C2806BFB600BDF9AF /* MainTabbarController.swift in Sources */,
@@ -310,6 +317,7 @@
 				70BDDED22803A7BA009A4818 /* SceneDelegate.swift in Sources */,
 				70BDDEFE2803A9CB009A4818 /* PhotoViewerView.swift in Sources */,
 				70BDDEF42803A86E009A4818 /* ProfileViewController.swift in Sources */,
+				70CA5E50280D7A2F00BDF9AF /* ChatViewController.swift in Sources */,
 				70BDDEE82803A800009A4818 /* ConversationViewController.swift in Sources */,
 				70BDDEF82803A9B5009A4818 /* ConversationView.swift in Sources */,
 				70BDDF062803A9EB009A4818 /* BaseView.swift in Sources */,

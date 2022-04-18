@@ -7,10 +7,13 @@
 
 import UIKit
 import FirebaseAuth
+import JGProgressHUD
 
 class RegisterViewController: BaseViewController {
     
     private let selfView = RegisterView()
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +67,14 @@ class RegisterViewController: BaseViewController {
                     return
         }
         
+        spinner.show(in: view)
+        
         DatabaseManager.shared.userExists(with: email) { [weak self] isExist in
+            
+            DispatchQueue.main.async {
+                self?.spinner.dismiss()
+            }
+            
             guard !isExist else {
                 // user already exists
                 self?.alertUserLoginError(message: "Looks like a user account for that email address already exists")
@@ -86,6 +96,7 @@ class RegisterViewController: BaseViewController {
             else {
                 // fail register
                 print("Fail Register")
+                self?.alertUserLoginError(message: "Failed Register... Try again:)")
             }
         }
     }

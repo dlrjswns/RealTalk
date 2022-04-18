@@ -9,10 +9,13 @@ import UIKit
 import FacebookLogin
 import Firebase
 import FBSDKLoginKit
+import JGProgressHUD
 
 class LoginViewController: BaseViewController {
     
     private let selfView = LoginView()
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private var loginObserver: NSObjectProtocol?
     
@@ -62,7 +65,14 @@ class LoginViewController: BaseViewController {
                     return
         }
         
+        spinner.show(in: view)
+        
         AuthManager.shared.loginUser(email: email, password: password) { [weak self] isLogin in
+            
+            DispatchQueue.main.async {
+                self?.spinner.dismiss()
+            }
+            
             if !isLogin {
                 // Fail Log In
                 print("Failed Log In")

@@ -8,6 +8,21 @@
 import UIKit
 
 class NewConversationView: BaseView {
+    
+    let tableView: UITableView = {
+        $0.register(UITableViewCell.self,
+                    forCellReuseIdentifier: "cell")
+       return $0
+    }(UITableView())
+    
+    let noResultsLabel: UILabel = {
+        $0.text = "No Results"
+        $0.textAlignment = .center
+        $0.textColor = .green
+        $0.font = .systemFont(ofSize: 21, weight: .medium)
+       return $0
+    }(UILabel())
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
