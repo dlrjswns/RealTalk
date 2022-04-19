@@ -34,6 +34,7 @@
 		70CA5E1C2806BFB600BDF9AF /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */; };
 		70CA5E50280D7A2F00BDF9AF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E4F280D7A2F00BDF9AF /* ChatViewController.swift */; };
 		70CA5E52280D7A4800BDF9AF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E51280D7A4800BDF9AF /* ChatView.swift */; };
+		70CA5E54280E8EDA00BDF9AF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CA5E53280E8EDA00BDF9AF /* StorageManager.swift */; };
 		B8A63403AC86B7579D6BC64A /* Pods_RealTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFECEE49E8FDF398667A29 /* Pods_RealTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		70CA5E1B2806BFB600BDF9AF /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		70CA5E4F280D7A2F00BDF9AF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		70CA5E51280D7A4800BDF9AF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		70CA5E53280E8EDA00BDF9AF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		A5920B2811C62C2231E21C87 /* Pods-RealTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTalk.debug.xcconfig"; path = "Target Support Files/Pods-RealTalk/Pods-RealTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 				70CA5E0C2803E58D00BDF9AF /* Extensions.swift */,
 				70CA5E17280584AB00BDF9AF /* AuthManager.swift */,
 				70CA5E19280669E300BDF9AF /* DatabaseManager.swift */,
+				70CA5E53280E8EDA00BDF9AF /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				70BDDEEA2803A807009A4818 /* LoginViewController.swift in Sources */,
 				70BDDEEC2803A837009A4818 /* RegisterViewController.swift in Sources */,
+				70CA5E54280E8EDA00BDF9AF /* StorageManager.swift in Sources */,
 				70BDDEFC2803A9C4009A4818 /* RegisterView.swift in Sources */,
 				70BDDEF22803A864009A4818 /* NewConversationViewController.swift in Sources */,
 				70CA5E52280D7A4800BDF9AF /* ChatView.swift in Sources */,
